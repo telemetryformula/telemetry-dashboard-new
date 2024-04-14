@@ -1,51 +1,45 @@
-const { gql } = require("apollo-server");
 
-const schema = gql`
-  type Dps {
-    timestamp: Int!
-    value: Float!
-  }
 
-  type Traffic {
-    total: Int!
-    dps: [Dps]
-  }
-
-  type CPU {
-    percentage: Float!
-  }
-
-  type Distribution {
-    region: String!
-    percentage: Float!
-  }
-
-  type Message {
-    title: String!
-    description: String!
-    color: String!
-  }
-
-  type Query {
-    cpu: CPU
-    traffic: Traffic
-    distribution: [Distribution]
-    messages: [Message]
-  }
-
-  type Mutation {
-    cpu: CPU
-    traffic: Traffic
-    distribution: [Distribution]
-    messages: [Message]
+const typeDefs = `#graphql
+  type CAN_message {
+    FL_Rotor_Temp_2: Float,
+    FR_Rotor_Temp_2: Float,
+    RL_Rotor_Temp_2: Float,
+    RR_Rotor_Temp_2: Float,
+    Exhaust_Temperature_Cylinder1: Float,
+    Exhaust_Temperature_Cylinder2: Float,
+    Exhaust_Temperature_Cylinder3: Float,
+    Exhaust_Temperature_Cylinder4: Float,
+    Brake_Pressure_Front: Float,
+    Brake_Pressure_Rear: Float,
+    Throttle_Position: Float,
+    Gear_Shift_State: Float,
+    Steered_Angle: Float,
+    Lap_GainLoss_Running: Float,
+    Lap_GainLoss_Final: Float,
+    Log_Time_Remaining: Float,
+    Reference_Lap_Time: Float,
+    Running_Lap_Time: Float,
+    Lap_Time: Float,
+    Lap_Number: Float,
+    Engine_Speed: Float,
+    Gear: Float,
+    Battery_Volts: Float,
+    Vehicle_Speed: Float,
+    Coolant_Temperature: Float,
+    Coolant_Inlet_Temperature: Float,
+    Engine_Oil_Temperature: Float,
+    Engine_Oil_Pressure: Float
   }
 
   type Subscription {
-    cpu: CPU
-    traffic: Traffic
-    distribution: [Distribution]
-    messages: [Message]
+    can: CAN_message
   }
+
+  type Query {
+    test: String
+  }
+
 `;
 
-module.exports = schema;
+export default typeDefs
