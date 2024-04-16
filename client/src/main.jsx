@@ -9,13 +9,13 @@ import { getMainDefinition } from '@apollo/client/utilities'
 import './index.css'
 
 const httpLink = new HttpLink({
-  uri: "http://localhost:4000/graphql"
+  uri: `http://${window.location.hostname}:4000/graphql`
 });
 
 const wsLink = new GraphQLWsLink(
   createClient(
     {
-      url: "ws://localhost:4000/subscriptions"
+      url: `ws://${window.location.hostname}:4000/graphql`
     }
   )
 )
