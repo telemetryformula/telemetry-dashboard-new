@@ -1,0 +1,255 @@
+{   
+    "Engine_Speed": {
+        "DBC_ID": "Engine_Speed",
+        "label": " RPM",
+        "start": 0,
+        "end": 15000,
+        "major_divisions": 1000,
+        "minor_divisions": 500,
+        "marks": [{"color": "red", "start": 50, "end": 500}],
+        "multiplier": 60
+    },
+    "Gear": {
+        "DBC_ID": "Gear",
+        "label": "",
+        "start": 1,
+        "end": 7,
+        "major_divisions": 1,
+        "minor_divisions": 0,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Gear_Shift_State": {
+        "DBC_ID": "Gear_Shift_State",
+        "label": "",
+        "start": 1,
+        "end": 7,
+        "major_divisions": 1,
+        "minor_divisions": 0,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Steered_Angle": {
+        "DBC_ID": "Steered_Angle",
+        "label": "",
+        "start": -180,
+        "end": 180,
+        "major_divisions": 25,
+        "minor_divisions": 0,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Battery_Volts": {
+        "DBC_ID": "Battery_Volts",
+        "label": " Volts",
+        "start": 10,
+        "end": 15,
+        "major_divisions": 1,
+        "minor_divisions": 0.5,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Vehicle_Speed": {
+        "DBC_ID": "Vehicle_Speed",
+        "label": "km/h",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Lap_GainLoss_Running": {
+        "DBC_ID": "Lap_GainLoss_Running",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Lap_GainLoss_Final": {
+        "DBC_ID": "Lap_GainLoss_Final",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Log_Time_Remaining": {
+        "DBC_ID": "Log_Time_Remaining",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Reference_Lap_Time": {
+        "DBC_ID": "Reference_Lap_Time",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Running_Lap_Time": {
+        "DBC_ID": "Running_Lap_Time",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Lap_Time": {
+        "DBC_ID": "Lap_Time",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Lap_Number": {
+        "DBC_ID": "Lap_Number",
+        "label": "",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 2,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Coolant_Temperature": {
+        "DBC_ID": "Coolant_Temperature",
+        "label": " C",
+        "start": 0,
+        "end": 100,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Coolant_Inlet_Temperature": {
+        "DBC_ID": "Coolant_Inlet_Temperature",
+        "label": " C",
+        "start": 0,
+        "end": 100,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "FL_Rotor_Temp_2": {
+        "DBC_ID": "FL_Rotor_Temp_2",
+        "label": " C",
+        "start": 0,
+        "end": 600,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "FR_Rotor_Temp_2": {
+        "DBC_ID": "FR_Rotor_Temp_2",
+        "label": " C",
+        "start": 0,
+        "end": 600,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "RL_Rotor_Temp_2": {
+        "DBC_ID": "RL_Rotor_Temp_2",
+        "label": " C",
+        "start": 0,
+        "end": 500,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "RR_Rotor_Temp_2": {
+        "DBC_ID": "RR_Rotor_Temp_2",
+        "label": " C",
+        "start": 0,
+        "end": 500,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Brake_Pressure_Front": {
+        "DBC_ID": "Brake_Pressure_Front",
+        "label": "  psi",
+        "start": 0,
+        "end": 1100,
+        "major_divisions": 200,
+        "minor_divisions": 100,
+        "marks": [{"color": "red", "start": 0, "end": 1100}],
+        "multiplier": 0.145
+    },
+    "Brake_Pressure_Rear": {
+        "DBC_ID": "Brake_Pressure_Rear",
+        "label": " psi",
+        "start": 0,
+        "end": 1100,
+        "major_divisions": 200,
+        "minor_divisions": 100,
+        "marks": [{"color": "red", "start": 0, "end": 1100}],
+        "multiplier": 0.145
+    },
+    "Exhaust_Temperature_Cylinder1": {
+        "DBC_ID": "Exhaust_Temperature_Cylinder1",
+        "label": " C",
+        "start": 0,
+        "end": 1000,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Exhaust_Temperature_Cylinder2": {
+        "DBC_ID": "Exhaust_Temperature_Cylinder2",
+        "label": " C",
+        "start": 0,
+        "end": 1000,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Exhaust_Temperature_Cylinder3": {
+        "DBC_ID": "Exhaust_Temperature_Cylinder3",
+        "label": " C",
+        "start": 0,
+        "end": 1000,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Exhaust_Temperature_Cylinder4": {
+        "DBC_ID": "Exhaust_Temperature_Cylinder4",
+        "label": " C",
+        "start": 0,
+        "end": 1000,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Throttle_Position": {
+        "DBC_ID": "Throttle_Position",
+        "label": " ratio",
+        "start": 0,
+        "end": 100,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [{"color": "red", "start": 50, "end": 500}],
+        "multiplier": 100
+    },
+    "Engine_Oil_Temperature": {
+        "DBC_ID": "Engine_Oil_Temperature",
+        "label": " C",
+        "start": 0,
+        "end": 150,
+        "major_divisions": 25,
+        "minor_divisions": 10,
+        "marks": [{"color": "red", "start": 50, "end": 500}]
+    },
+    "Engine_Oil_Pressure": {
+        "DBC_ID": "Engine_Oil_Pressure",
+        "label": " psi",
+        "start": 0,
+        "end": 200,
+        "major_divisions": 50,
+        "minor_divisions": 25,
+        "marks": [{"color": "red", "start": 50, "end": 500}],
+        "multiplier": 0.145
+    }
+}

@@ -3,184 +3,19 @@ import {gql, useSubscription} from "@apollo/client"
 
 import GaugeComponent from 'react-gauge-component'
 
+import EditModal from './EditModal/EditModal'
+
+import defaultSignalConfig from './assets/default_signal_config.json'
+
 const originalLayout = getFromLS("layouts") || {}
 
-//Component with default values
+const originalSignalConfig = getFromLS("signal_configs") || defaultSignalConfig
 
-const signalConfigs = [
-  {
-      "DBC_ID": "Engine_Speed",
-      "label": " RPM",
-      "start": 0,
-      "end": 15000,
-      "major_divisions": 1000,
-      "minor_divisions": 500,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-      "multiplier": 60
-  },
-  {
-      "DBC_ID": "Gear",
-      "label": "",
-      "start": 1,
-      "end": 7,
-      "major_divisions": 1,
-      "minor_divisions": 0,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Battery_Volts",
-      "label": " Volts",
-      "start": 10,
-      "end": 15,
-      "major_divisions": 1,
-      "minor_divisions": 0.5,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Vehicle_Speed",
-      "label": "km/h",
-      "start": 0,
-      "end": 100,
-      "major_divisions": 10,
-      "minor_divisions": 2,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Coolant_Temperature",
-      "label": " C",
-      "start": 0,
-      "end": 100,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Coolant_Inlet_Temperature",
-      "label": " C",
-      "start": 0,
-      "end": 100,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "FL_Rotor_Temp_2",
-      "label": " C",
-      "start": 0,
-      "end": 600,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "FR_Rotor_Temp_2",
-      "label": "C",
-      "start": 0,
-      "end": 600,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "RL_Rotor_Temp_2",
-      "label": " C",
-      "start": 0,
-      "end": 500,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "RR_Rotor_Temp_2",
-      "label": " C",
-      "start": 0,
-      "end": 500,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Brake_Pressure_Front",
-      "label": "  psi",
-      "start": 0,
-      "end": 1100,
-      "major_divisions": 200,
-      "minor_divisions": 100,
-      "marks": [{"color": "red", "start": 0, "end": 1100}],
-      "multiplier": 0.145,
-  },
-  {
-      "DBC_ID": "Brake_Pressure_Rear",
-      "label": " psi",
-      "start": 0,
-      "end": 1100,
-      "major_divisions": 200,
-      "minor_divisions": 100,
-      "marks": [{"color": "red", "start": 0, "end": 1100}],
-      "multiplier": 0.145,
-  },
-  {
-      "DBC_ID": "Exhaust_Temperature_Cylinder1",
-      "label": " C",
-      "start": 0,
-      "end": 1000,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Exhaust_Temperature_Cylinder2",
-      "label": " C",
-      "start": 0,
-      "end": 1000,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Exhaust_Temperature_Cylinder3",
-      "label": " C",
-      "start": 0,
-      "end": 1000,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Exhaust_Temperature_Cylinder4",
-      "label": " C",
-      "start": 0,
-      "end": 1000,
-      "major_divisions": 100,
-      "minor_divisions": 50,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Throttle_Position",
-      "label": " ratio",
-      "start": 0,
-      "end": 100,
-      "major_divisions": 10,
-      "minor_divisions": 5,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-      "multiplier": 100
-  },
-  {
-      "DBC_ID": "Engine_Oil_Temperature",
-      "label": " C",
-      "start": 0,
-      "end": 150,
-      "major_divisions": 25,
-      "minor_divisions": 10,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  },
-  {
-      "DBC_ID": "Engine_Oil_Pressure",
-      "label": " psi",
-      "start": 0,
-      "end": 200,
-      "major_divisions": 50,
-      "minor_divisions": 25,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-      "multiplier": 0.145
-  }
-]
+const originalEditSignalMode = getFromLS("edit_signal_mode") || false
+
+const originalEditPositionMode = getFromLS("edit_position_mode") || false
+
+//Component with default values
 
 const GET_LATEST_MESSAGE = gql`
   subscription Can {
@@ -218,7 +53,7 @@ const GET_LATEST_MESSAGE = gql`
 
 
 import { WidthProvider, Responsive } from "react-grid-layout";
-import _ from "lodash";
+import _, { remove } from "lodash";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -227,7 +62,7 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
  */
 const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }, rowHeight = 100 }) => {
 
-  const [canData, setCANData] = useState({CAN_Values: {
+  const [canData, setCANData] = useState({
     "FL_Rotor_Temp_2": null,
     "FR_Rotor_Temp_2": null,
     "RL_Rotor_Temp_2": null,
@@ -256,43 +91,61 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
     "Coolant_Inlet_Temperature": null,
     "Engine_Oil_Temperature": null,
     "Engine_Oil_Pressure": null,
-  }})
+  })
+
+  const [signalConfigs, setSignalConfigs] = useState(JSON.parse(JSON.stringify(originalSignalConfig)))
 
   const [items, setItems] = useState(
-    Object.keys(canData.CAN_Values).map(function (dataSource, index, canDataArray) {
+    Object.keys(canData).map(function (dataSource, index, canDataArray) {
       
       return {
         name: dataSource,
         x: (index * 2) %12,
         y: (index/6) * index,
         w: 2,
-        h: 2,
+        h: 3,
         add: index === (canDataArray.length - 1)
       };
     })
   );
 
-  const [layouts, setLayouts] = useState(JSON.parse(JSON.stringify(originalLayout)))
+  const [isOpen, setIsOpen] = useState(false);
+  const [targetKey, setTargetKey] = useState(null);
 
-  const [newCounter, setNewCounter] = useState(0);
-  const [breakpoint, setBreakpoint] = useState(null);
+  const [currentLayouts, setLayouts] = useState(JSON.parse(JSON.stringify(originalLayout)))
+
+  const [editPositionMode, setEditPositionMode] = useState(JSON.parse(JSON.stringify(originalEditPositionMode)))
+  const [editSignalMode, setEditSignalMode] = useState(JSON.parse(JSON.stringify(originalEditSignalMode)))
+
+  const handleOpenModal = (key) => {
+    setTargetKey(key);
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const handleUpdateObject = (updatedObject) => {
+    const DBC_ID = updatedObject.DBC_ID
+    setSignalConfigs(prevState => {
+      const newSignalConfigs = {...prevState}
+      newSignalConfigs[DBC_ID] = updatedObject
+      saveToLS("signal_configs", newSignalConfigs)
+      return newSignalConfigs
+    })
+    setIsOpen(false);
+  };
 
   const createElement = (el) => {
-    const signalConfig = signalConfigs.find(obj => obj.DBC_ID == el.name) || {
-      "label": " C",
-      "start": 0,
-      "end": 100,
-      "major_divisions": 25,
-      "minor_divisions": 10,
-      "marks": [{"color": "red", "start": 50, "end": 500}],
-  };
     return (
-      <div key={el.name} data-grid={el}>
+      <div key={el.name} {...setDataGrid(el)}>
+        {editSignalMode && <button onClick={() => handleOpenModal(el.name)}>Edit</button>}
         <GaugeComponent 
-        value={canData.CAN_Values[el.name]* (signalConfig.multiplier ?? 1)}
-        arc={{subArcs:[{limit:signalConfig.start, color: "#FFFFFF"}]}}
-        minValue={signalConfig.start}
-        maxValue={signalConfig.end}
+        value={canData[el.name]* (signalConfigs[el.name].multiplier ?? 1)}
+        arc={{subArcs:[{limit:signalConfigs[el.name].start, color: "#FFFFFF"}]}}
+        minValue={signalConfigs[el.name].start}
+        maxValue={signalConfigs[el.name].end}
         marginInPercent={{top: 0.12, bottom: -0.03, left: 0.07, right: 0.07}}
         labels={{
           "formatTextValue": "test",
@@ -300,10 +153,10 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
           "maxDecimalDigits": 2,
           "hide": false,
           valueLabel: {
-            formatTextValue: (value) => {return `${value}${signalConfig.label}`}
+            formatTextValue: function(value) {return `${value}${signalConfigs[el.name].label}`}
           },
           tickLabels: {
-            ticks: Array.from({ length: (signalConfig.end - signalConfig.start)/signalConfig.major_divisions }, (_, index) => index * signalConfig.major_divisions + signalConfig.start).map(value => ({ value}))
+            ticks: Array.from({ length: (signalConfigs[el.name].end - signalConfigs[el.name].start)/signalConfigs[el.name].major_divisions }, (_, index) => index * signalConfigs[el.name].major_divisions + signalConfigs[el.name].start).map(value => ({ value}))
         }
         }} />
         <h5 className="mb-1" align="center">{el.name}</h5>
@@ -311,29 +164,47 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
     );
   }
 
-  const onAddItem = () => {
-    console.log("adding", "n" + newCounter);
-    setItems(prevItems => {
-      return [
-        ...prevItems,
-        {
-          i: "n" + newCounter,
-          x: (prevItems.length * 2) % (cols || 12),
-          y: Infinity, // puts it at the bottom
-          w: 2,
-          h: 2
-        }
-      ];
-    });
-    setNewCounter(prevCounter => prevCounter + 1);
+  const setDataGrid = (el) => {
+    if (getFromLS("layouts")) {
+      console.log(getFromLS("layouts"))
+      return {};
+    }
+    return {
+      'data-grid': 
+        el
+      ,
+    };
   }
 
-  const onBreakpointChange = (newBreakpoint, newCols) => {
-    setBreakpoint(newBreakpoint);
+  const generateItems = (items) => {
+    return items.map(el => createElement(el))
   }
 
   const onLayoutChange = (layout, layouts) => {
     saveToLS("layouts", layouts)
+    setLayouts(layouts)
+  }
+
+  const resetDefaultLayouts = () => {
+    removeFromLS("layouts")
+    window.location.reload()
+  }
+
+  const resetDefaultSignalConfigs = () => {
+    removeFromLS("signal_configs")
+    setSignalConfigs(defaultSignalConfig)
+  }
+
+  const onSetEditPositionMode = () => {
+    editPositionMode ? null : setEditSignalMode(false)
+    saveToLS("edit_position_mode", !editPositionMode)
+    setEditPositionMode(!editPositionMode)
+  }
+
+  const onSetEditSignalMode = () => {
+    editSignalMode ? null : setEditPositionMode(false)
+    saveToLS("edit_signal_mode", !editSignalMode)
+    setEditSignalMode(!editSignalMode)
   }
 
   useSubscription(GET_LATEST_MESSAGE, {
@@ -341,13 +212,13 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
         if (subscriptionData?.subscriptionData?.data?.can) {
           const canData = subscriptionData?.subscriptionData?.data?.can
           setCANData(prevState => {
-            const newCANState = {...prevState.CAN_Values}
+            const newCANState = {...prevState}
             Object.entries(canData).forEach(([key, value]) => {
               if (value !== null) {
                   newCANState[key] = value;
               }
             });
-            return {CAN_Values: newCANState}
+            return newCANState
           })
         }
     }
@@ -355,16 +226,28 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
 
   return (
     <div>
+      <button onClick={onSetEditPositionMode}>Position Edit Mode: {editPositionMode ? "Enabled" : "Disabled"}</button>
+      <button onClick={onSetEditSignalMode}>Signal Edit Mode: {editSignalMode ? "Enabled" : "Disabled"}</button>
+      <EditModal
+        isOpen={isOpen}
+        targetKey={targetKey}
+        onClose={handleCloseModal}
+        object={signalConfigs}
+        onUpdate={handleUpdateObject}
+      />
       <ResponsiveReactGridLayout
-        onLayoutChange={(layout, layouts) => onLayoutChange(layout, layouts)}
-        onBreakpointChange={onBreakpointChange}
         className={className}
         cols={cols}
         rowHeight={rowHeight}
-        layouts={originalLayout}
+        layouts={currentLayouts}
+        onLayoutChange={(layout, layouts) => onLayoutChange(layout, layouts)}
+        isResizable={editPositionMode}
+        isDraggable={editPositionMode}
       >
-        {items.map(el => createElement(el))}
+        {generateItems(items)}
       </ResponsiveReactGridLayout>
+      <button onClick={resetDefaultLayouts}>RESET ALL POSITIONS TO DEFAULT</button>
+      <button onClick={resetDefaultSignalConfigs}>RESET ALL SIGNALS TO DEFAULT</button>
     </div>
   );
 }
@@ -384,11 +267,22 @@ function getFromLS(key) {
 
 function saveToLS(key, value) {
   if (localStorage) {
+    const currentValue = JSON.parse(localStorage.getItem("rgl-8")) || {}
+    currentValue[key] = value
     localStorage.setItem(
       "rgl-8",
-      JSON.stringify({
-        [key]: value
-      })
+      JSON.stringify(currentValue)
+    );
+  }
+}
+
+function removeFromLS(key) {
+  if (localStorage) {
+    const currentValue = JSON.parse(localStorage.getItem("rgl-8")) || {}
+    delete currentValue[key]
+    localStorage.setItem(
+      "rgl-8",
+      JSON.stringify(currentValue)
     );
   }
 }
