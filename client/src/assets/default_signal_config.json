@@ -1,6 +1,7 @@
 {   
     "Engine_Speed": {
         "DBC_ID": "Engine_Speed",
+		"type": "gauge",
         "label": " RPM",
         "start": 0,
         "end": 15000,
@@ -11,6 +12,7 @@
     },
     "Gear": {
         "DBC_ID": "Gear",
+		"type": "gauge",
         "label": "",
         "start": 1,
         "end": 7,
@@ -20,6 +22,7 @@
     },
     "Gear_Shift_State": {
         "DBC_ID": "Gear_Shift_State",
+		"type": "gauge",
         "label": "",
         "start": 1,
         "end": 7,
@@ -29,6 +32,7 @@
     },
     "Steered_Angle": {
         "DBC_ID": "Steered_Angle",
+		"type": "gauge",
         "label": "",
         "start": -180,
         "end": 180,
@@ -38,6 +42,7 @@
     },
     "Battery_Volts": {
         "DBC_ID": "Battery_Volts",
+		"type": "gauge",
         "label": " Volts",
         "start": 10,
         "end": 15,
@@ -47,6 +52,7 @@
     },
     "Vehicle_Speed": {
         "DBC_ID": "Vehicle_Speed",
+		"type": "gauge",
         "label": "km/h",
         "start": 0,
         "end": 100,
@@ -56,6 +62,7 @@
     },
     "Lap_GainLoss_Running": {
         "DBC_ID": "Lap_GainLoss_Running",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -65,6 +72,7 @@
     },
     "Lap_GainLoss_Final": {
         "DBC_ID": "Lap_GainLoss_Final",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -74,6 +82,7 @@
     },
     "Log_Time_Remaining": {
         "DBC_ID": "Log_Time_Remaining",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -83,6 +92,7 @@
     },
     "Reference_Lap_Time": {
         "DBC_ID": "Reference_Lap_Time",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -92,6 +102,7 @@
     },
     "Running_Lap_Time": {
         "DBC_ID": "Running_Lap_Time",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -101,6 +112,7 @@
     },
     "Lap_Time": {
         "DBC_ID": "Lap_Time",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -110,6 +122,7 @@
     },
     "Lap_Number": {
         "DBC_ID": "Lap_Number",
+		"type": "gauge",
         "label": "",
         "start": 0,
         "end": 100,
@@ -119,6 +132,7 @@
     },
     "Coolant_Temperature": {
         "DBC_ID": "Coolant_Temperature",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 100,
@@ -126,6 +140,7 @@
     },
     "Coolant_Inlet_Temperature": {
         "DBC_ID": "Coolant_Inlet_Temperature",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 100,
@@ -133,6 +148,7 @@
     },
     "FL_Rotor_Temp_2": {
         "DBC_ID": "FL_Rotor_Temp_2",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 600,
@@ -142,6 +158,7 @@
     },
     "FR_Rotor_Temp_2": {
         "DBC_ID": "FR_Rotor_Temp_2",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 600,
@@ -151,6 +168,7 @@
     },
     "RL_Rotor_Temp_2": {
         "DBC_ID": "RL_Rotor_Temp_2",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 500,
@@ -160,6 +178,7 @@
     },
     "RR_Rotor_Temp_2": {
         "DBC_ID": "RR_Rotor_Temp_2",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 500,
@@ -169,6 +188,7 @@
     },
     "Brake_Pressure_Front": {
         "DBC_ID": "Brake_Pressure_Front",
+		"type": "gauge",
         "label": "  psi",
         "start": 0,
         "end": 1100,
@@ -179,6 +199,7 @@
     },
     "Brake_Pressure_Rear": {
         "DBC_ID": "Brake_Pressure_Rear",
+		"type": "gauge",
         "label": " psi",
         "start": 0,
         "end": 1100,
@@ -189,6 +210,7 @@
     },
     "Exhaust_Temperature_Cylinder1": {
         "DBC_ID": "Exhaust_Temperature_Cylinder1",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 1000,
@@ -198,6 +220,7 @@
     },
     "Exhaust_Temperature_Cylinder2": {
         "DBC_ID": "Exhaust_Temperature_Cylinder2",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 1000,
@@ -207,6 +230,7 @@
     },
     "Exhaust_Temperature_Cylinder3": {
         "DBC_ID": "Exhaust_Temperature_Cylinder3",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 1000,
@@ -216,6 +240,7 @@
     },
     "Exhaust_Temperature_Cylinder4": {
         "DBC_ID": "Exhaust_Temperature_Cylinder4",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 1000,
@@ -225,6 +250,7 @@
     },
     "Throttle_Position": {
         "DBC_ID": "Throttle_Position",
+		"type": "gauge",
         "label": " ratio",
         "start": 0,
         "end": 100,
@@ -235,6 +261,7 @@
     },
     "Engine_Oil_Temperature": {
         "DBC_ID": "Engine_Oil_Temperature",
+		"type": "gauge",
         "label": " C",
         "start": 0,
         "end": 150,
@@ -244,6 +271,7 @@
     },
     "Engine_Oil_Pressure": {
         "DBC_ID": "Engine_Oil_Pressure",
+		"type": "gauge",
         "label": " psi",
         "start": 0,
         "end": 200,
@@ -251,5 +279,35 @@
         "minor_divisions": 25,
         "marks": [{"color": "red", "start": 50, "end": 500}],
         "multiplier": 0.145
-    }
+    },
+	"Battery_Voltage": {
+		"DBC_ID": "Battery_Voltage",
+		"type": "numeric",
+		"label": "V",
+		"start": 0,
+		"end": 20,
+		"major_divisions": 5,
+		"minor_divisions": 1,
+		"multiplier": 1
+	},
+	"Motor_Status": {
+		"DBC_ID": "Motor_Status",
+		"type": "bitfield",
+		"label": "",
+		"bit_labels": [
+			"OverTemp",
+			"Undervoltage",
+			"CommError",
+			"Inverted",
+			"BrakeEngaged",
+			"LimitA",
+			"LimitB",
+			"Reserved"
+		],
+		"start": 0,
+		"end": 255,
+		"major_divisions": 1,
+		"minor_divisions": 1,
+		"multiplier": 1
+	}
 }

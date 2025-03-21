@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {gql, useSubscription} from "@apollo/client"
 
 import GaugeComponent from 'react-gauge-component'
+import NumericDisplay from './components/NumericDisplay'
+import BitfieldDisplay from './components/BitfieldDisplay'
 
 import EditModal from './EditModal/EditModal'
 
@@ -48,6 +50,7 @@ const GET_LATEST_MESSAGE = gql`
       Coolant_Inlet_Temperature
       Engine_Oil_Temperature
       Engine_Oil_Pressure
+      Motor_Status
     }
   }`
 
@@ -57,9 +60,6 @@ import _, { remove } from "lodash";
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-/**
- * This layout demonstrates how to use a grid with a dynamic number of elements.
- */
 const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }, rowHeight = 100 }) => {
 
   const [canData, setCANData] = useState({
@@ -96,8 +96,7 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
   const [signalConfigs, setSignalConfigs] = useState(JSON.parse(JSON.stringify(originalSignalConfig)))
 
   const [items, setItems] = useState(
-    Object.keys(canData).map(function (dataSource, index, canDataArray) {
-      
+    Object.keys(originalSignalConfig).map(function (dataSource, index, canDataArray) {
       return {
         name: dataSource,
         x: (index * 2) %12,
@@ -138,27 +137,48 @@ const AddRemoveLayout = ({ className = "layout", cols = { lg: 12, md: 10, sm: 6,
   };
 
   const createElement = (el) => {
+    const config = signalConfigs[el.name];
+    const value = canData[el.name] * (config?.multiplier ?? 1);
+    const type = config?.type || "gauge";
+
+    let content;
+
+    if (type === "numeric") {
+      content = (
+        <NumericDisplay value={value} label={config?.label} />
+      );
+    } else if (type === "bitfield") {
+      content = (
+        <BitfieldDisplay value={value} bitLabels={config.bit_labels} />
+      );
+    } else {
+      content = (
+        <GaugeComponent 
+          value={value}
+          arc={{subArcs:[{limit: config.start, color: "#FFFFFF"}]}}
+          minValue={config.start}
+          maxValue={config.end}
+          marginInPercent={{top: 0.12, bottom: -0.03, left: 0.07, right: 0.07}}
+          labels={{
+            formatTextValue: "test",
+            matchColorWithArc: false,
+            maxDecimalDigits: 2,
+            hide: false,
+            valueLabel: {
+              formatTextValue: (val) => `${val}${config.label}`
+            },
+            tickLabels: {
+              ticks: Array.from({ length: (config.end - config.start)/config.major_divisions }, (_, index) => index * config.major_divisions + config.start).map(value => ({ value }))
+            }
+          }}
+        />
+      );
+    }
+
     return (
       <div key={el.name} {...setDataGrid(el)}>
         {editSignalMode && <button onClick={() => handleOpenModal(el.name)}>Edit</button>}
-        <GaugeComponent 
-        value={canData[el.name]* (signalConfigs[el.name].multiplier ?? 1)}
-        arc={{subArcs:[{limit:signalConfigs[el.name].start, color: "#FFFFFF"}]}}
-        minValue={signalConfigs[el.name].start}
-        maxValue={signalConfigs[el.name].end}
-        marginInPercent={{top: 0.12, bottom: -0.03, left: 0.07, right: 0.07}}
-        labels={{
-          "formatTextValue": "test",
-          "matchColorWithArc": false,
-          "maxDecimalDigits": 2,
-          "hide": false,
-          valueLabel: {
-            formatTextValue: function(value) {return `${value}${signalConfigs[el.name].label}`}
-          },
-          tickLabels: {
-            ticks: Array.from({ length: (signalConfigs[el.name].end - signalConfigs[el.name].start)/signalConfigs[el.name].major_divisions }, (_, index) => index * signalConfigs[el.name].major_divisions + signalConfigs[el.name].start).map(value => ({ value}))
-        }
-        }} />
+        {content}
         <h5 className="mb-1" align="center">{el.name}</h5>
       </div>
     );
@@ -259,7 +279,6 @@ function getFromLS(key) {
       ls = JSON.parse(localStorage.getItem("rgl-8")) || {};
     } catch (e) {
       console.log(e)
-      /*Ignore*/
     }
   }
   return ls[key];
