@@ -1,0 +1,573 @@
+{
+    "FrontBrakePressure": {
+        "DBC_ID": "FrontBrakePressure",
+        "type": "numeric",
+        "label": "PSI",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 0.001
+    },
+    "RearBreakPressure": {
+        "DBC_ID": "RearBreakPressure",
+        "type": "numeric",
+        "label": "PSI",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 0.001
+    },
+    "ThrottlePosPrimary": {
+        "DBC_ID": "ThrottlePosPrimary",
+        "type": "numeric",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1000.0
+    },
+    "ThrottlePosSecondary": {
+        "DBC_ID": "ThrottlePosSecondary",
+        "type": "numeric",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1000.0
+    },
+    "FRWheelSpeed": {
+        "DBC_ID": "FRWheelSpeed",
+        "type": "numeric",
+        "label": "km/hr",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 36.0
+    },
+    "FLWheelSpeed": {
+        "DBC_ID": "FLWheelSpeed",
+        "type": "numeric",
+        "label": "km/hr",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 36.0
+    },
+    "RRWheelSpeed": {
+        "DBC_ID": "RRWheelSpeed",
+        "type": "numeric",
+        "label": "km/hr",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 36.0
+    },
+    "RLWheelSpeed": {
+        "DBC_ID": "RLWheelSpeed",
+        "type": "numeric",
+        "label": "km/hr",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 36.0
+    },
+    "SteeringPotPrimary": {
+        "DBC_ID": "SteeringPotPrimary",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "SteeringPotSecondary": {
+        "DBC_ID": "SteeringPotSecondary",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "MotorOneCoolingLoopTempOut": {
+        "DBC_ID": "MotorOneCoolingLoopTempOut",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "MotorOneCoolingLoopTempIn": {
+        "DBC_ID": "MotorOneCoolingLoopTempIn",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "MotorTwoCoolingLoopTempOut": {
+        "DBC_ID": "MotorTwoCoolingLoopTempOut",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "MotorTwoCoolingLoopTempIn": {
+        "DBC_ID": "MotorTwoCoolingLoopTempIn",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InverterCoolingLoopTempOut": {
+        "DBC_ID": "InverterCoolingLoopTempOut",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InverterCoolingLoopTempIn": {
+        "DBC_ID": "InverterCoolingLoopTempIn",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMULateralAccel": {
+        "DBC_ID": "FrontIMULateralAccel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMULongAccel": {
+        "DBC_ID": "FrontIMULongAccel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMUVertAccel": {
+        "DBC_ID": "FrontIMUVertAccel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMUYawRotate": {
+        "DBC_ID": "FrontIMUYawRotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMUPitchRotate": {
+        "DBC_ID": "FrontIMUPitchRotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "FrontIMURollRotate": {
+        "DBC_ID": "FrontIMURollRotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvOneStatusWord": {
+        "DBC_ID": "InvOneStatusWord",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "InvOneActualSpeed": {
+        "DBC_ID": "InvOneActualSpeed",
+        "type": "numeric",
+        "label": "RPM",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvOneActualTorqueCurrent": {
+        "DBC_ID": "InvOneActualTorqueCurrent",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvOneActualMagnetizingCurrent": {
+        "DBC_ID": "InvOneActualMagnetizingCurrent",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvTwoStatusWord": {
+        "DBC_ID": "InvTwoStatusWord",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "InvTwoActualSpeedValue": {
+        "DBC_ID": "InvTwoActualSpeedValue",
+        "type": "numeric",
+        "label": "RPM",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvTwoTorqueCurrent": {
+        "DBC_ID": "InvTwoTorqueCurrent",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "InvTwoActualMagnetizingCurrent": {
+        "DBC_ID": "InvTwoActualMagnetizingCurrent",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "PackCurrent": {
+        "DBC_ID": "PackCurrent",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "PackInstVoltage": {
+        "DBC_ID": "PackInstVoltage",
+        "type": "numeric",
+        "label": "V",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "PackSOC": {
+        "DBC_ID": "PackSOC",
+        "type": "numeric",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "RelayState": {
+        "DBC_ID": "RelayState",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "PackDCL": {
+        "DBC_ID": "PackDCL",
+        "type": "numeric",
+        "label": "kWh",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "PackCCL": {
+        "DBC_ID": "PackCCL",
+        "type": "numeric",
+        "label": "kWh",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "LowestTemp": {
+        "DBC_ID": "LowestTemp",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "HighestTemp": {
+        "DBC_ID": "HighestTemp",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "LowCellID": {
+        "DBC_ID": "LowCellID",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "HighCellID": {
+        "DBC_ID": "HighCellID",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "LowTermistorID": {
+        "DBC_ID": "LowTermistorID",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "HighThermistorID": {
+        "DBC_ID": "HighThermistorID",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "InternalTemp": {
+        "DBC_ID": "InternalTemp",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "AverageTemp": {
+        "DBC_ID": "AverageTemp",
+        "type": "numeric",
+        "label": "C",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "PackHealth": {
+        "DBC_ID": "PackHealth",
+        "type": "numeric",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 1.0
+    },
+    "DTCFlagsOne": {
+        "DBC_ID": "DTCFlagsOne",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "DTCFlagsTwo": {
+        "DBC_ID": "DTCFlagsTwo",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "CurrentLimitStatus": {
+        "DBC_ID": "CurrentLimitStatus",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "ReadyToDriveinput": {
+        "DBC_ID": "ReadyToDriveinput",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0"
+        ],
+        "start": 0,
+        "end": 1
+    },
+    "ReadtToDriveArmInverters": {
+        "DBC_ID": "ReadtToDriveArmInverters",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0"
+        ],
+        "start": 0,
+        "end": 1
+    },
+    "TractionControlSetting": {
+        "DBC_ID": "TractionControlSetting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "TorqueVectoringLowSetting": {
+        "DBC_ID": "TorqueVectoringLowSetting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "TorqueVectoringHighSetting": {
+        "DBC_ID": "TorqueVectoringHighSetting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "LowCellVoltage": {
+        "DBC_ID": "LowCellVoltage",
+        "type": "numeric",
+        "label": "V",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    },
+    "HighCellVoltage": {
+        "DBC_ID": "HighCellVoltage",
+        "type": "numeric",
+        "label": "V",
+        "start": 0.0,
+        "end": 0.0,
+        "multiplier": 10.0
+    }
+}
