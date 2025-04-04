@@ -1,0 +1,108 @@
+{
+  "brakes": [
+    {
+      "title": "Default",
+      "signals": [
+        "Front_Brake_Pressure"
+      ]
+    }
+  ],
+  "dynamics": [
+    {
+      "title": "Default",
+      "signals": [
+        "FL_Wheel_Speed",
+        "FR_Wheel_Speed",
+        "Front_IMU_Lateral_Accel",
+        "Front_IMU_Long_Accel",
+        "Front_IMU_Pitch_Rotate",
+        "Front_IMU_Roll_Rotate",
+        "Front_IMU_Vert_Accel",
+        "Front_IMU_Yaw_Rotate",
+        "Inv_One_Actual_Speed",
+        "Inv_Two_Actual_Speed_Value",
+        "RL_Wheel_Speed",
+        "RR_Wheel_Speed",
+        "Steering_Pot_Primary",
+        "Steering_Pot_Secondary"
+      ]
+    }
+  ],
+  "battery": [
+    {
+      "title": "Default",
+      "signals": [
+        "Average_Temp",
+        "High_Cell_ID",
+        "High_Cell_Voltage",
+        "Highest_Temp",
+        "Internal_Temp",
+        "Inverter_Cooling_Loop_Temp_In",
+        "Inverter_Cooling_Loop_Temp_Out",
+        "Low_Cell_ID",
+        "Low_Cell_Voltage",
+        "Lowest_Temp",
+        "Motor_One_Cooling_Loop_Temp_In",
+        "Motor_One_Cooling_Loop_Temp_Out",
+        "Motor_Two_Cooling_Loop_Temp_In",
+        "Motor_Two_Cooling_Loop_Temp_Out",
+        "Pack_CCL",
+        "Pack_Current",
+        "Pack_DCL",
+        "Pack_Health",
+        "Pack_Inst_Voltage",
+        "Pack_SOC"
+      ]
+    }
+  ],
+  "motor": [
+    {
+      "title": "Default",
+      "signals": [
+        "Inv_One_Actual_Magnetizing_Current",
+        "Inv_One_Actual_Speed",
+        "Inv_One_Actual_Torque_Current",
+        "Inv_One_Status_Word",
+        "Inv_Two_Actual_Magnetizing_Current",
+        "Inv_Two_Actual_Speed_Value",
+        "Inv_Two_Status_Word",
+        "Inv_Two_Torque_Current",
+        "Inverter_Cooling_Loop_Temp_In",
+        "Inverter_Cooling_Loop_Temp_Out",
+        "Motor_One_Cooling_Loop_Temp_In",
+        "Motor_One_Cooling_Loop_Temp_Out",
+        "Motor_Two_Cooling_Loop_Temp_In",
+        "Motor_Two_Cooling_Loop_Temp_Out",
+        "Ready_To_Drive_Arm_Inverters"
+      ]
+    }
+  ],
+  "misc": [
+    {
+      "title": "Default",
+      "signals": [
+        "Current_Limit_Status",
+        "Inv_One_Status_Word",
+        "Inv_Two_Status_Word",
+        "Relay_State"
+      ]
+    }
+  ],
+  "safety": [
+    {
+      "title": "Default",
+      "signals": [
+        "Current_Limit_Status",
+        "DTC_Flags_One",
+        "DTC_Flags_Two",
+        "Inv_One_Actual_Torque_Current",
+        "Inv_Two_Torque_Current",
+        "Ready_To_Drive_Arm_Inverters",
+        "Ready_To_Drive_Input",
+        "Torque_Vectoring_High_Setting",
+        "Torque_Vectoring_Low_Setting",
+        "Traction_Control_Setting"
+      ]
+    }
+  ]
+}
