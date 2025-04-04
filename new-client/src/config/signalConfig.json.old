@@ -1,0 +1,793 @@
+{
+    "Front_Brake_Pressure": {
+        "DBC_ID": "Front_Brake_Pressure",
+        "type": "gauge",
+        "label": "PSI",
+        "start": 0,
+        "end": 2000,
+        "multiplier": 0.001,
+        "major_divisions": 200,
+        "minor_divisions": 100,
+        "marks": [
+            {
+                "color": "red",
+                "start": 1400,
+                "end": 2000
+            }
+        ]
+    },
+    "Rear_Break_Pressure": {
+        "DBC_ID": "Rear_Break_Pressure",
+        "type": "gauge",
+        "label": "PSI",
+        "start": 0,
+        "end": 2000,
+        "multiplier": 0.001,
+        "major_divisions": 200,
+        "minor_divisions": 100,
+        "marks": [
+            {
+                "color": "red",
+                "start": 1400,
+                "end": 2000
+            }
+        ]
+    },
+    "Throttle_Pos_Primary": {
+        "DBC_ID": "Throttle_Pos_Primary",
+        "type": "gauge",
+        "label": "Percent",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1000.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Throttle_Pos_Secondary": {
+        "DBC_ID": "Throttle_Pos_Secondary",
+        "type": "gauge",
+        "label": "Percent",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1000.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "FR_Wheel_Speed": {
+        "DBC_ID": "FR_Wheel_Speed",
+        "type": "gauge",
+        "label": "km/hr",
+        "start": 0,
+        "end": 200,
+        "multiplier": 36.0,
+        "major_divisions": 20,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "FL_Wheel_Speed": {
+        "DBC_ID": "FL_Wheel_Speed",
+        "type": "gauge",
+        "label": "km/hr",
+        "start": 0,
+        "end": 200,
+        "multiplier": 36.0,
+        "major_divisions": 20,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "RR_Wheel_Speed": {
+        "DBC_ID": "RR_Wheel_Speed",
+        "type": "gauge",
+        "label": "km/hr",
+        "start": 0,
+        "end": 200,
+        "multiplier": 36.0,
+        "major_divisions": 20,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "RL_Wheel_Speed": {
+        "DBC_ID": "RL_Wheel_Speed",
+        "type": "gauge",
+        "label": "km/hr",
+        "start": 0,
+        "end": 200,
+        "multiplier": 36.0,
+        "major_divisions": 20,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Steering_Pot_Primary": {
+        "DBC_ID": "Steering_Pot_Primary",
+        "type": "gauge",
+        "label": "Degrees",
+        "start": -180,
+        "end": 180,
+        "multiplier": 10.0,
+        "major_divisions": 30,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Steering_Pot_Secondary": {
+        "DBC_ID": "Steering_Pot_Secondary",
+        "type": "gauge",
+        "label": "Degrees",
+        "start": -180,
+        "end": 180,
+        "multiplier": 10.0,
+        "major_divisions": 30,
+        "minor_divisions": 10,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Motor_One_Cooling_Loop_Temp_Out": {
+        "DBC_ID": "Motor_One_Cooling_Loop_Temp_Out",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Motor_One_Cooling_Loop_Temp_In": {
+        "DBC_ID": "Motor_One_Cooling_Loop_Temp_In",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Motor_Two_Cooling_Loop_Temp_Out": {
+        "DBC_ID": "Motor_Two_Cooling_Loop_Temp_Out",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Motor_Two_Cooling_Loop_Temp_In": {
+        "DBC_ID": "Motor_Two_Cooling_Loop_Temp_In",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Inverter_Cooling_Loop_Temp_Out": {
+        "DBC_ID": "Inverter_Cooling_Loop_Temp_Out",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Inverter_Cooling_Loop_Temp_In": {
+        "DBC_ID": "Inverter_Cooling_Loop_Temp_In",
+        "type": "gauge",
+        "label": "C",
+        "start": 0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 80,
+                "end": 100
+            }
+        ]
+    },
+    "Front_IMU_Lateral_Accel": {
+        "DBC_ID": "Front_IMU_Lateral_Accel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 4,
+        "multiplier": 1.0
+    },
+    "Front_IMU_Long_Accel": {
+        "DBC_ID": "Front_IMU_Long_Accel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 4,
+        "multiplier": 1.0
+    },
+    "Front_IMU_Vert_Accel": {
+        "DBC_ID": "Front_IMU_Vert_Accel",
+        "type": "numeric",
+        "label": "g",
+        "start": 0.0,
+        "end": 4,
+        "multiplier": 1.0
+    },
+    "Front_IMU_Yaw_Rotate": {
+        "DBC_ID": "Front_IMU_Yaw_Rotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": -180,
+        "end": 180,
+        "multiplier": 1.0
+    },
+    "Front_IMU_Pitch_Rotate": {
+        "DBC_ID": "Front_IMU_Pitch_Rotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": -180,
+        "end": 180,
+        "multiplier": 1.0
+    },
+    "Front_IMU_Roll_Rotate": {
+        "DBC_ID": "Front_IMU_Roll_Rotate",
+        "type": "numeric",
+        "label": "Degrees",
+        "start": -180,
+        "end": 180,
+        "multiplier": 1.0
+    },
+    "Inv_One_Status_Word": {
+        "DBC_ID": "Inv_One_Status_Word",
+        "type": "bitfield",
+        "bit_labels": [
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "System Ready (SBM)",
+            "Error",
+            "Warning",
+            "HV Activation ACK",
+            "HV Activation Level",
+            "Controller Enable ACK",
+            "Controller Enable Level",
+            "Derating"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "Inv_One_Actual_Speed": {
+        "DBC_ID": "Inv_One_Actual_Speed",
+        "type": "gauge",
+        "label": "RPM",
+        "start": 0.0,
+        "end": 1000,
+        "multiplier": 1.0,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Inv_One_Actual_Torque_Current": {
+        "DBC_ID": "Inv_One_Actual_Torque_Current",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0
+    },
+    "Inv_One_Actual_Magnetizing_Current": {
+        "DBC_ID": "Inv_One_Actual_Magnetizing_Current",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0
+    },
+    "Inv_Two_Status_Word": {
+        "DBC_ID": "Inv_Two_Status_Word",
+        "type": "bitfield",
+        "bit_labels": [
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "Reserved",
+            "System Ready (SBM)",
+            "Error",
+            "Warning",
+            "HV Activation ACK",
+            "HV Activation Level",
+            "Controller Enable ACK",
+            "Controller Enable Level",
+            "Derating"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "Inv_Two_Actual_Speed_Value": {
+        "DBC_ID": "Inv_Two_Actual_Speed_Value",
+        "type": "gauge",
+        "label": "RPM",
+        "start": 0.0,
+        "end": 1000,
+        "multiplier": 1.0,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Inv_Two_Torque_Current": {
+        "DBC_ID": "Inv_Two_Torque_Current",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0
+    },
+    "Inv_Two_Actual_Magnetizing_Current": {
+        "DBC_ID": "Inv_Two_Actual_Magnetizing_Current",
+        "type": "numeric",
+        "label": "A",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0
+    },
+    "Pack_Current": {
+        "DBC_ID": "Pack_Current",
+        "type": "gauge",
+        "label": "A",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 10.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Pack_Inst_Voltage": {
+        "DBC_ID": "Pack_Inst_Voltage",
+        "type": "gauge",
+        "label": "V",
+        "start": 0.0,
+        "end": 1000,
+        "multiplier": 10.0,
+        "major_divisions": 100,
+        "minor_divisions": 50,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Pack_SOC": {
+        "DBC_ID": "Pack_SOC",
+        "type": "gauge",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 10.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Relay_State": {
+        "DBC_ID": "Relay_State",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7"
+        ],
+        "start": 0,
+        "end": 255
+    },
+    "Pack_DCL": {
+        "DBC_ID": "Pack_DCL",
+        "type": "gauge",
+        "label": "kWh",
+        "start": 0.0,
+        "end": 500,
+        "multiplier": 1.0,
+        "major_divisions": 50,
+        "minor_divisions": 25,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Pack_CCL": {
+        "DBC_ID": "Pack_CCL",
+        "type": "gauge",
+        "label": "kWh",
+        "start": 0.0,
+        "end": 500,
+        "multiplier": 1.0,
+        "major_divisions": 50,
+        "minor_divisions": 25,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Lowest_Temp": {
+        "DBC_ID": "Lowest_Temp",
+        "type": "gauge",
+        "label": "C",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Highest_Temp": {
+        "DBC_ID": "Highest_Temp",
+        "type": "gauge",
+        "label": "C",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Low_Cell_ID": {
+        "DBC_ID": "Low_Cell_ID",
+        "type": "numeric",
+        "label": "",
+        "start": 0.0,
+        "end": 255,
+        "multiplier": 1.0
+    },
+    "High_Cell_ID": {
+        "DBC_ID": "High_Cell_ID",
+        "type": "numeric",
+        "label": "",
+        "start": 0.0,
+        "end": 255,
+        "multiplier": 1.0
+    },
+    "Low_Termistor_ID": {
+        "DBC_ID": "Low_Termistor_ID",
+        "type": "numeric",
+        "label": "",
+        "start": 0.0,
+        "end": 255,
+        "multiplier": 1.0
+    },
+    "High_Thermistor_ID": {
+        "DBC_ID": "High_Thermistor_ID",
+        "type": "numeric",
+        "label": "",
+        "start": 0.0,
+        "end": 255,
+        "multiplier": 1.0
+    },
+    "Internal_Temp": {
+        "DBC_ID": "Internal_Temp",
+        "type": "gauge",
+        "label": "C",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Average_Temp": {
+        "DBC_ID": "Average_Temp",
+        "type": "gauge",
+        "label": "C",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "Pack_Health": {
+        "DBC_ID": "Pack_Health",
+        "type": "gauge",
+        "label": "Percent",
+        "start": 0.0,
+        "end": 100,
+        "multiplier": 1.0,
+        "major_divisions": 10,
+        "minor_divisions": 5,
+        "marks": [
+            {
+                "color": "red",
+                "start": 0.0,
+                "end": 0.0
+            }
+        ]
+    },
+    "DTC_Flags_One": {
+        "DBC_ID": "DTC_Flags_One",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "DTC_Flags_Two": {
+        "DBC_ID": "DTC_Flags_Two",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "Current_Limit_Status": {
+        "DBC_ID": "Current_Limit_Status",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2",
+            "Bit 3",
+            "Bit 4",
+            "Bit 5",
+            "Bit 6",
+            "Bit 7",
+            "Bit 8",
+            "Bit 9",
+            "Bit 10",
+            "Bit 11",
+            "Bit 12",
+            "Bit 13",
+            "Bit 14",
+            "Bit 15"
+        ],
+        "start": 0,
+        "end": 65535
+    },
+    "Ready_To_Drive_Input": {
+        "DBC_ID": "Ready_To_Drive_Input",
+        "type": "bitfield",
+        "bit_labels": [
+            "RTD input"
+        ],
+        "start": 0,
+        "end": 1
+    },
+    "Ready_To_Drive_Arm_Inverters": {
+        "DBC_ID": "Ready_To_Drive_Arm_Inverters",
+        "type": "bitfield",
+        "bit_labels": [
+            "RTD Arm Inverters"
+        ],
+        "start": 0,
+        "end": 1
+    },
+    "Traction_Control_Setting": {
+        "DBC_ID": "Traction_Control_Setting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "Torque_Vectoring_Low_Setting": {
+        "DBC_ID": "Torque_Vectoring_Low_Setting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "Torque_Vectoring_High_Setting": {
+        "DBC_ID": "Torque_Vectoring_High_Setting",
+        "type": "bitfield",
+        "bit_labels": [
+            "Bit 0",
+            "Bit 1",
+            "Bit 2"
+        ],
+        "start": 0,
+        "end": 7
+    },
+    "Low_Cell_Voltage": {
+        "DBC_ID": "Low_Cell_Voltage",
+        "type": "numeric",
+        "label": "V",
+        "start": 0.0,
+        "end": 1000,
+        "multiplier": 10.0
+    },
+    "High_Cell_Voltage": {
+        "DBC_ID": "High_Cell_Voltage",
+        "type": "numeric",
+        "label": "V",
+        "start": 0.0,
+        "end": 1000,
+        "multiplier": 10.0
+    }
+}
