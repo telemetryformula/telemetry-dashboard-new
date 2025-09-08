@@ -5,6 +5,41 @@ const ResponsiveGauge = ({ value, config }) => {
   const ref = useRef(null);
   const [size, setSize] = useState(200);
 
+  const generateSubArcs = (config) => {
+    let start = config.start ?? 0;
+    let end = config.end ?? 100;
+  
+    if (start > end) [start, end] = [end, start];
+  
+    const defaultColor = "#2e8b57";
+  
+    if (!config?.marks?.length) {
+      return [{ limit: end, color: defaultColor }];
+    }
+  
+    const sorted = [...config.marks].sort((a, b) => a.start - b.start);
+    const subArcs = [];
+  
+    let lastLimit = start;
+  
+    for (const mark of sorted) {
+      if (mark.end <= mark.start) continue;
+  
+      if (mark.start > lastLimit) {
+        subArcs.push({ limit: mark.start, color: defaultColor });
+      }
+  
+      subArcs.push({ limit: mark.end, color: mark.color });
+      lastLimit = mark.end;
+    }
+  
+    if (lastLimit < end) {
+      subArcs.push({ limit: end, color: defaultColor });
+    }
+  
+    return subArcs;
+  };
+
   useEffect(() => {
     const update = () => {
       if (ref.current) {
@@ -25,6 +60,9 @@ const ResponsiveGauge = ({ value, config }) => {
         size={size}
         minValue={config.start}
         maxValue={config.end}
+        arc={{
+          subArcs: generateSubArcs(config)
+        }}
         labels={{
           valueLabel: {
             formatTextValue: (val) => `${val}${config.label ?? ""}`,

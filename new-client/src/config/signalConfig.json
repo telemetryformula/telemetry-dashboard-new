@@ -5,7 +5,7 @@
     "label": "PSI",
     "start": 0,
     "end": 2000,
-    "multiplier": 0.001,
+    "multiplier": 1,
     "major_divisions": 200,
     "minor_divisions": 100,
     "marks": [
@@ -26,7 +26,7 @@
     "label": "PSI",
     "start": 0,
     "end": 2000,
-    "multiplier": 0.001,
+    "multiplier": 1,
     "major_divisions": 200,
     "minor_divisions": 100,
     "marks": [
@@ -47,7 +47,7 @@
     "label": "Percent",
     "start": 0,
     "end": 100,
-    "multiplier": 1000.0,
+    "multiplier": 1,
     "major_divisions": 10,
     "minor_divisions": 5,
     "marks": [
@@ -67,7 +67,7 @@
     "label": "Percent",
     "start": 0,
     "end": 100,
-    "multiplier": 1000.0,
+    "multiplier": 1,
     "major_divisions": 10,
     "minor_divisions": 5,
     "marks": [
@@ -87,7 +87,7 @@
     "label": "km/hr",
     "start": 0,
     "end": 200,
-    "multiplier": 36.0,
+    "multiplier": 1,
     "major_divisions": 20,
     "minor_divisions": 10,
     "marks": [
@@ -108,7 +108,7 @@
     "label": "km/hr",
     "start": 0,
     "end": 200,
-    "multiplier": 36.0,
+    "multiplier": 1,
     "major_divisions": 20,
     "minor_divisions": 10,
     "marks": [
@@ -129,7 +129,7 @@
     "label": "km/hr",
     "start": 0,
     "end": 200,
-    "multiplier": 36.0,
+    "multiplier": 1,
     "major_divisions": 20,
     "minor_divisions": 10,
     "marks": [
@@ -150,7 +150,7 @@
     "label": "km/hr",
     "start": 0,
     "end": 200,
-    "multiplier": 36.0,
+    "multiplier": 1,
     "major_divisions": 20,
     "minor_divisions": 10,
     "marks": [
@@ -171,7 +171,7 @@
     "label": "Degrees",
     "start": -180,
     "end": 180,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "major_divisions": 30,
     "minor_divisions": 10,
     "marks": [
@@ -192,7 +192,7 @@
     "label": "Degrees",
     "start": -180,
     "end": 180,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "major_divisions": 30,
     "minor_divisions": 10,
     "marks": [
@@ -213,7 +213,7 @@
     "label": "C",
     "start": 0,
     "end": 100,
-    "multiplier": 1.0,
+    "multiplier": 1,
     "major_divisions": 10,
     "minor_divisions": 5,
     "marks": [
@@ -323,6 +323,50 @@
     "label": "C",
     "start": 0,
     "end": 100,
+    "multiplier": 1.0,
+    "major_divisions": 10,
+    "minor_divisions": 5,
+    "marks": [
+      {
+        "color": "red",
+        "start": 80,
+        "end": 100
+      }
+    ],
+    "categories": [
+      "all",
+      "battery",
+      "motor"
+    ]
+  },
+  "Gearbox_One_Temp": {
+    "DBC_ID": "Gearbox_One_Temp",
+    "type": "gauge",
+    "label": "C",
+    "start": 0,
+    "end": 150,
+    "multiplier": 1.0,
+    "major_divisions": 10,
+    "minor_divisions": 5,
+    "marks": [
+      {
+        "color": "red",
+        "start": 80,
+        "end": 100
+      }
+    ],
+    "categories": [
+      "all",
+      "battery",
+      "motor"
+    ]
+  },
+  "Gearbox_Two_Temp": {
+    "DBC_ID": "Gearbox_Two_Temp",
+    "type": "gauge",
+    "label": "C",
+    "start": 0,
+    "end": 150,
     "multiplier": 1.0,
     "major_divisions": 10,
     "minor_divisions": 5,
@@ -569,7 +613,7 @@
     "label": "A",
     "start": 0.0,
     "end": 100,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "major_divisions": 10,
     "minor_divisions": 5,
     "marks": [
@@ -590,7 +634,7 @@
     "label": "V",
     "start": 0.0,
     "end": 1000,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "major_divisions": 100,
     "minor_divisions": 50,
     "marks": [
@@ -611,7 +655,7 @@
     "label": "Percent",
     "start": 0.0,
     "end": 100,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "major_divisions": 10,
     "minor_divisions": 5,
     "marks": [
@@ -1002,7 +1046,7 @@
     "label": "V",
     "start": 0.0,
     "end": 1000,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "categories": [
       "battery",
       "all"
@@ -1014,7 +1058,7 @@
     "label": "V",
     "start": 0.0,
     "end": 1000,
-    "multiplier": 10.0,
+    "multiplier": 1,
     "categories": [
       "battery",
       "all"

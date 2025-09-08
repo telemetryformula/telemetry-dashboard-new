@@ -1,7 +1,7 @@
 {
   "brakes": [
     {
-      "title": "Pressures",
+      "title": "Default",
       "signals": [
         "Front_Brake_Pressure"
       ]
@@ -9,35 +9,20 @@
   ],
   "dynamics": [
     {
-      "title": "Wheel Speeds",
+      "title": "Default",
       "signals": [
         "FL_Wheel_Speed",
         "FR_Wheel_Speed",
-        "RL_Wheel_Speed",
-        "RR_Wheel_Speed"
-      ]
-    },
-    {
-      "title": "IMU",
-      "signals": [
         "Front_IMU_Lateral_Accel",
         "Front_IMU_Long_Accel",
         "Front_IMU_Pitch_Rotate",
         "Front_IMU_Roll_Rotate",
         "Front_IMU_Vert_Accel",
-        "Front_IMU_Yaw_Rotate"
-      ]
-    },
-    {
-      "title": "Inverter Status",
-      "signals": [
+        "Front_IMU_Yaw_Rotate",
         "Inv_One_Actual_Speed",
-        "Inv_Two_Actual_Speed_Value"
-      ]
-    },
-    {
-      "title": "Steering",
-      "signals": [
+        "Inv_Two_Actual_Speed_Value",
+        "RL_Wheel_Speed",
+        "RR_Wheel_Speed",
         "Steering_Pot_Primary",
         "Steering_Pot_Secondary"
       ]
@@ -45,27 +30,22 @@
   ],
   "battery": [
     {
-      "title": "Temperatures",
+      "title": "Default",
       "signals": [
         "Average_Temp",
+        "High_Cell_ID",
+        "High_Cell_Voltage",
         "Highest_Temp",
         "Internal_Temp",
         "Inverter_Cooling_Loop_Temp_In",
         "Inverter_Cooling_Loop_Temp_Out",
+        "Low_Cell_ID",
+        "Low_Cell_Voltage",
         "Lowest_Temp",
         "Motor_One_Cooling_Loop_Temp_In",
         "Motor_One_Cooling_Loop_Temp_Out",
         "Motor_Two_Cooling_Loop_Temp_In",
-        "Motor_Two_Cooling_Loop_Temp_Out"
-      ]
-    },
-    {
-      "title": "Battery Stats",
-      "signals": [
-        "High_Cell_ID",
-        "High_Cell_Voltage",
-        "Low_Cell_ID",
-        "Low_Cell_Voltage",
+        "Motor_Two_Cooling_Loop_Temp_Out",
         "Pack_CCL",
         "Pack_Current",
         "Pack_DCL",
@@ -77,7 +57,7 @@
   ],
   "motor": [
     {
-      "title": "Inverter Status",
+      "title": "Default",
       "signals": [
         "Inv_One_Actual_Magnetizing_Current",
         "Inv_One_Actual_Speed",
@@ -87,66 +67,41 @@
         "Inv_Two_Actual_Speed_Value",
         "Inv_Two_Status_Word",
         "Inv_Two_Torque_Current",
-        "Ready_To_Drive_Arm_Inverters"
-      ]
-    },
-    {
-      "title": "Temperatures",
-      "signals": [
         "Inverter_Cooling_Loop_Temp_In",
         "Inverter_Cooling_Loop_Temp_Out",
         "Motor_One_Cooling_Loop_Temp_In",
         "Motor_One_Cooling_Loop_Temp_Out",
         "Motor_Two_Cooling_Loop_Temp_In",
-        "Motor_Two_Cooling_Loop_Temp_Out"
+        "Motor_Two_Cooling_Loop_Temp_Out",
+        "Ready_To_Drive_Arm_Inverters"
       ]
     }
   ],
   "misc": [
     {
-      "title": "DTC & Limits",
+      "title": "Default",
       "signals": [
-        "Current_Limit_Status"
-      ]
-    },
-    {
-      "title": "Inverter Status",
-      "signals": [
+        "Current_Limit_Status",
         "Inv_One_Status_Word",
-        "Inv_Two_Status_Word"
-      ]
-    },
-    {
-      "title": "Relay & States",
-      "signals": [
+        "Inv_Two_Status_Word",
         "Relay_State"
       ]
     }
   ],
   "safety": [
     {
-      "title": "DTC & Limits",
+      "title": "Default",
       "signals": [
         "Current_Limit_Status",
         "DTC_Flags_One",
         "DTC_Flags_Two",
+        "Inv_One_Actual_Torque_Current",
+        "Inv_Two_Torque_Current",
+        "Ready_To_Drive_Arm_Inverters",
+        "Ready_To_Drive_Input",
         "Torque_Vectoring_High_Setting",
         "Torque_Vectoring_Low_Setting",
         "Traction_Control_Setting"
-      ]
-    },
-    {
-      "title": "Inverter Status",
-      "signals": [
-        "Inv_One_Actual_Torque_Current",
-        "Inv_Two_Torque_Current",
-        "Ready_To_Drive_Arm_Inverters"
-      ]
-    },
-    {
-      "title": "Relay & States",
-      "signals": [
-        "Ready_To_Drive_Input"
       ]
     }
   ]

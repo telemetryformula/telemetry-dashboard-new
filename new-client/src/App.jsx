@@ -3,6 +3,8 @@ import { useSubscription } from "@apollo/client";
 import { CAN_SUBSCRIPTION } from "./graphql/subscriptions";
 import SignalViewer from "./components/SignalViewer.jsx";
 import signalConfig from "./config/signalConfig.json";
+import layoutConfig from "./config/layoutConfig.json";
+
 
 // Extract all unique categories from signalConfig
 const extractCategories = (config) => {
@@ -25,7 +27,15 @@ const App = () => {
     onSubscriptionData: ({ subscriptionData }) => {
       const data = subscriptionData.data?.can;
       if (data) {
-        setCanData((prev) => ({ ...prev, ...data }));
+        setCanData((prevState) => {
+          const updated = { ...prevState };
+          Object.entries(data).forEach(([key, value]) => {
+            if (value !== null && value !== undefined) {
+              updated[key] = value;
+            }
+          });
+          return updated;
+        });        
       }
     },
   });
@@ -61,7 +71,7 @@ const App = () => {
       </div>
 
       {/* Signal Grid */}
-      <div
+      {/* <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
@@ -76,7 +86,62 @@ const App = () => {
             config={cfg}
           />
         ))}
+      </div> */}
+      {
+  layoutConfig[activeCategory] ? (
+    // Render using layout config
+    layoutConfig[activeCategory].map((group, idx) => (
+      <div key={idx} style={{ marginBottom: "2rem" }}>
+        <h3 style={{ marginBottom: "0.5rem", borderBottom: "1px solid #ddd" }}>
+          {group.title}
+        </h3>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            gap: "10px",
+          }}
+        >
+          {group.signals.map((signalName) => {
+            const cfg = signalConfig[signalName];
+            if (!cfg) return null;
+            return (
+              <SignalViewer
+                key={signalName}
+                name={signalName}
+                value={canData[signalName]}
+                config={cfg}
+              />
+            );
+          })}
+        </div>
       </div>
+    ))
+  ) : (
+    // Fallback: flat grid of all signals in this category
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+        gap: "10px",
+      }}
+    >
+      {Object.entries(signalConfig)
+        .filter(([_, cfg]) =>
+          activeCategory === "all" || cfg.categories?.includes(activeCategory)
+        )
+        .map(([name, cfg]) => (
+          <SignalViewer
+            key={name}
+            name={name}
+            value={canData[name]}
+            config={cfg}
+          />
+        ))}
+    </div>
+  )
+}
+
     </div>
   );
 };

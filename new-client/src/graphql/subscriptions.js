@@ -19,6 +19,8 @@ export const CAN_SUBSCRIPTION = gql`
       Motor_Two_Cooling_Loop_Temp_In
       Inverter_Cooling_Loop_Temp_Out
       Inverter_Cooling_Loop_Temp_In
+      Gearbox_One_Temp
+      Gearbox_Two_Temp
       Front_IMU_Lateral_Accel
       Front_IMU_Long_Accel
       Front_IMU_Vert_Accel
