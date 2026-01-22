@@ -1,0 +1,519 @@
+{
+  "Front_Brake_Pressure": {
+    "DBC_ID": "Front_Brake_Pressure",
+    "label": " PSI",
+    "start": 0,
+    "end": 65535,
+    "major_divisions": 5000,
+    "minor_divisions": 1000,
+    "type": "Chart",
+    "family": "Brakes", 
+    "marks": [{"color": "red", "start": 0, "end": 65535}]
+  },
+  "Rear_Break_Pressure": {
+    "DBC_ID": "Rear_Break_Pressure",
+    "label": " PSI",
+    "start": 0,
+    "end": 65535,
+    "major_divisions": 5000,
+    "minor_divisions": 1000,
+    "type": "Gauge",
+    "family": "Brakes", "marks": [{"color": "red", "start": 0, "end": 65535}]
+  },
+  "Throttle_Pos_Primary": {
+    "DBC_ID": "Throttle_Pos_Primary",
+    "label": " Percent",
+    "start": 0,
+    "end": 100,
+    "major_divisions": 10,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Throttle_Pos_Secondary": {
+    "DBC_ID": "Throttle_Pos_Secondary",
+    "label": " Percent",
+    "start": 0,
+    "end": 100,
+    "major_divisions": 10,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "FR_Wheel_Speed": {
+    "DBC_ID": "FR_Wheel_Speed",
+    "label": " km/hr",
+    "start": 0,
+    "end": 300,
+    "major_divisions": 50,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "FL_Wheel_Speed": {
+    "DBC_ID": "FL_Wheel_Speed",
+    "label": " km/hr",
+    "start": 0,
+    "end": 300,
+    "major_divisions": 50,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "RR_Wheel_Speed": {
+    "DBC_ID": "RR_Wheel_Speed",
+    "label": " km/hr",
+    "start": 0,
+    "end": 300,
+    "major_divisions": 50,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "RL_Wheel_Speed": {
+    "DBC_ID": "RL_Wheel_Speed",
+    "label": " km/hr",
+    "start": 0,
+    "end": 300,
+    "major_divisions": 50,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Steering_Pot_Primary": {
+    "DBC_ID": "Steering_Pot_Primary",
+    "label": " Degrees",
+    "start": -180,
+    "end": 180,
+    "major_divisions": 30,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "Suspension", 
+    "marks": []
+  },
+  "Steering_Pot_Secondary": {
+    "DBC_ID": "Steering_Pot_Secondary",
+    "label": " Degrees",
+    "start": -180,
+    "end": 180,
+    "major_divisions": 30,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "Suspension", 
+    "marks": []
+  },
+  "Motor_One_Cooling_Loop_Temp_Out": {
+    "DBC_ID": "Motor_One_Cooling_Loop_Temp_Out",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Motor_One_Cooling_Loop_Temp_In": {
+    "DBC_ID": "Motor_One_Cooling_Loop_Temp_In",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Motor_Two_Cooling_Loop_Temp_Out": {
+    "DBC_ID": "Motor_Two_Cooling_Loop_Temp_Out",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Motor_Two_Cooling_Loop_Temp_In": {
+    "DBC_ID": "Motor_Two_Cooling_Loop_Temp_In",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inverter_Cooling_Loop_Temp_Out": {
+    "DBC_ID": "Inverter_Cooling_Loop_Temp_Out",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inverter_Cooling_Loop_Temp_In": {
+    "DBC_ID": "Inverter_Cooling_Loop_Temp_In",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Gearbox_One_Temp": {
+    "DBC_ID": "Gearbox_One_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Gearbox_Two_Temp": {
+    "DBC_ID": "Gearbox_Two_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 150,
+    "major_divisions": 25,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Lateral_Accel": {
+    "DBC_ID": "Front_IMU_Lateral_Accel",
+    "label": " g",
+    "start": -10,
+    "end": 10,
+    "major_divisions": 2,
+    "minor_divisions": 0.5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Long_Accel": {
+    "DBC_ID": "Front_IMU_Long_Accel",
+    "label": " g",
+    "start": -10,
+    "end": 10,
+    "major_divisions": 2,
+    "minor_divisions": 0.5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Vert_Accel": {
+    "DBC_ID": "Front_IMU_Vert_Accel",
+    "label": " g",
+    "start": -10,
+    "end": 10,
+    "major_divisions": 2,
+    "minor_divisions": 0.5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Yaw_Rotate": {
+    "DBC_ID": "Front_IMU_Yaw_Rotate",
+    "label": " Degrees",
+    "start": -180,
+    "end": 180,
+    "major_divisions": 30,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Pitch_Rotate": {
+    "DBC_ID": "Front_IMU_Pitch_Rotate",
+    "label": " Degrees",
+    "start": -180,
+    "end": 180,
+    "major_divisions": 30,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Front_IMU_Roll_Rotate": {
+    "DBC_ID": "Front_IMU_Roll_Rotate",
+    "label": " Degrees",
+    "start": -180,
+    "end": 180,
+    "major_divisions": 30,
+    "minor_divisions": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_One_Status_Word": {
+    "DBC_ID": "Inv_One_Status_Word",
+    "label": "",
+    "start": 0,
+    "end": 65535,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_One_Actual_Speed": {
+    "DBC_ID": "Inv_One_Actual_Speed",
+    "label": " RPM",
+    "start": 0,
+    "end": 20000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_One_Actual_Torque_Current": {
+    "DBC_ID": "Inv_One_Actual_Torque_Current",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_One_Actual_Magnetizing_Current": {
+    "DBC_ID": "Inv_One_Actual_Magnetizing_Current",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_Two_Status_Word": {
+    "DBC_ID": "Inv_Two_Status_Word",
+    "label": "",
+    "start": 0,
+    "end": 65535,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_Two_Actual_Speed_Value": {
+    "DBC_ID": "Inv_Two_Actual_Speed_Value",
+    "label": " RPM",
+    "start": 0,
+    "end": 20000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_Two_Torque_Current": {
+    "DBC_ID": "Inv_Two_Torque_Current",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Inv_Two_Actual_Magnetizing_Current": {
+    "DBC_ID": "Inv_Two_Actual_Magnetizing_Current",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_Current": {
+    "DBC_ID": "Pack_Current",
+    "label": " A",
+    "start": -1000,
+    "end": 1000,
+    "major_divisions": 200,
+    "minor_divisions": 50,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_Inst_Voltage": {
+    "DBC_ID": "Pack_Inst_Voltage",
+    "label": " V",
+    "start": 0,
+    "end": 800,
+    "major_divisions": 100,
+    "minor_divisions": 20,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_SOC": {
+    "DBC_ID": "Pack_SOC",
+    "label": " %",
+    "start": 0,
+    "end": 100,
+    "major_divisions": 10,
+    "minor_divisions": 5,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Relay_State": {
+    "DBC_ID": "Relay_State",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_DCL": {
+    "DBC_ID": "Pack_DCL",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_CCL": {
+    "DBC_ID": "Pack_CCL",
+    "label": " A",
+    "start": 0,
+    "end": 1000,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Lowest_Temp": {
+    "DBC_ID": "Lowest_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 120,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Highest_Temp": {
+    "DBC_ID": "Highest_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 120,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Low_Cell_ID": {
+    "DBC_ID": "Low_Cell_ID",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "High_Cell_ID": {
+    "DBC_ID": "High_Cell_ID",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Low_Termistor_ID": {
+    "DBC_ID": "Low_Termistor_ID",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "High_Thermistor_ID": {
+    "DBC_ID": "High_Thermistor_ID",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Internal_Temp": {
+    "DBC_ID": "Internal_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 120,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Average_Temp": {
+    "DBC_ID": "Average_Temp",
+    "label": " C",
+    "start": -40,
+    "end": 120,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Pack_Health": {
+    "DBC_ID": "Pack_Health",
+    "label": " %",
+    "start": 0,
+    "end": 100,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "DTC_Flags_One": {
+    "DBC_ID": "DTC_Flags_One",
+    "label": "",
+    "start": 0,
+    "end": 65535,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "DTC_Flags_Two": {
+    "DBC_ID": "DTC_Flags_Two",
+    "label": "",
+    "start": 0,
+    "end": 65535,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Current_Limit_Status": {
+    "DBC_ID": "Current_Limit_Status",
+    "label": "",
+    "start": 0,
+    "end": 255,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Ready_To_Drive_Input": {
+    "DBC_ID": "Ready_To_Drive_Input",
+    "label": "",
+    "start": 0,
+    "end": 1,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Ready_To_Drive_Arm_Inverters": {
+    "DBC_ID": "Ready_To_Drive_Arm_Inverters",
+    "label": "",
+    "start": 0,
+    "end": 1,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Traction_Control_Setting": {
+    "DBC_ID": "Traction_Control_Setting",
+    "label": "",
+    "start": 0,
+    "end": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Torque_Vectoring_Low_Setting": {
+    "DBC_ID": "Torque_Vectoring_Low_Setting",
+    "label": "",
+    "start": 0,
+    "end": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Torque_Vectoring_High_Setting": {
+    "DBC_ID": "Torque_Vectoring_High_Setting",
+    "label": "",
+    "start": 0,
+    "end": 10,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "Low_Cell_Voltage": {
+    "DBC_ID": "Low_Cell_Voltage",
+    "label": " V",
+    "start": 0,
+    "end": 5,
+    "major_divisions": 1,
+    "minor_divisions": 0.2,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  },
+  "High_Cell_Voltage": {
+    "DBC_ID": "High_Cell_Voltage",
+    "label": " V",
+    "start": 0,
+    "end": 5,
+    "major_divisions": 1,
+    "minor_divisions": 0.2,
+    "type": "Gauge",
+    "family": "None", "marks": []
+  }
+}
