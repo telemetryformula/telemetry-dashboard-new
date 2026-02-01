@@ -1,1 +1,6 @@
 node_modules/
+
+# Ignore AI agent instruction files
+AGENTS.md
+AGENTS.local.md
+**/AGENTS.md

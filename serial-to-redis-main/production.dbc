@@ -1,0 +1,271 @@
+VERSION "100"
+
+
+
+
+
+NS_ : 
+
+	NS_DESC_
+
+	CM_
+
+	BA_DEF_
+
+	BA_
+
+	VAL_
+
+	CAT_DEF_
+
+	CAT_
+
+	FILTER
+
+	BA_DEF_DEF_
+
+	EV_DATA_
+
+	ENVVAR_DATA_
+
+	SGTYPE_
+
+	SGTYPE_VAL_
+
+	BA_DEF_SGTYPE_
+
+	BA_SGTYPE_
+
+	SIG_TYPE_REF_
+
+	VAL_TABLE_
+
+	SIG_GROUP_
+
+	SIG_VALTYPE_
+
+	SIGTYPE_VALTYPE_
+
+	BO_TX_BU_
+
+	BA_DEF_REL_
+
+	BA_REL_
+
+	BA_DEF_DEF_REL_
+
+	BU_SG_REL_
+
+	BU_EV_REL_
+
+	BU_BO_REL_
+
+	SG_MUL_VAL_
+
+
+
+BS_:
+
+
+
+BU_: C185
+
+
+
+
+
+BO_ 1793 CHANNEL_2: 8 C185
+
+ SG_ Coolant_Temperature : 7|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ Coolant_Inlet_Temperature : 23|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ Engine_Oil_Temperature : 39|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+ SG_ Engine_Oil_Pressure : 55|16@0- (0.1,0) [0|0] "kPa" Vector__XXX
+
+
+
+BO_ 1794 CHANNEL_3: 8 C185
+
+ SG_ FL_Rotor_Temp_2 : 7|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ FR_Rotor_Temp_2 : 23|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ RL_Rotor_Temp_2 : 39|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+ SG_ RR_Rotor_Temp_2 : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+
+
+
+BO_ 1795 CHANNEL_4: 8 C185
+
+ SG_ Exhaust_Temperature_Cylinder1 : 7|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ Exhaust_Temperature_Cylinder2 : 23|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ Exhaust_Temperature_Cylinder3 : 39|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+ SG_ Exhaust_Temperature_Cylinder4 : 55|16@0- (0.1,0) [0|0] "C"  Vector__XXX
+
+
+
+BO_ 1796 CHANNEL_5: 8 C185
+
+ SG_ Brake_Pressure_Front : 7|16@0+ (1,0) [0|0] "kPa"  Vector__XXX
+
+ SG_ Brake_Pressure_Rear : 23|16@0+ (1,0) [0|0] "kPa"  Vector__XXX
+
+ SG_ Throttle_Position : 39|16@0- (0.001,0) [0|0] "ratio"  Vector__XXX
+
+ SG_ Gear_Shift_State : 55|8@0- (1,0) [0|0] ""  Vector__XXX
+
+
+
+BO_ 1797 CHANNEL_6: 8 C185
+
+ SG_ Steered_Angle : 7|16@0- (0.1,0) [0|0] "deg"  Vector__XXX
+
+ SG_ Lap_GainLoss_Running : 23|16@0- (0.01,0) [0|0] "s"  Vector__XXX
+
+ SG_ Lap_GainLoss_Final : 39|16@0- (0.01,0) [0|0] "s"  Vector__XXX
+ SG_ Log_Time_Remaining : 55|16@0- (10,0) [0|0] "s" Vector__XXX
+
+
+
+BO_ 1798 CHANNEL_7: 8 C185
+
+ SG_ Reference_Lap_Time : 7|16@0- (0.01,0) [0|0] "s"  Vector__XXX
+
+ SG_ Running_Lap_Time : 23|16@0- (0.01,0) [0|0] "s"  Vector__XXX
+
+ SG_ Lap_Time : 39|16@0- (0.01,0) [0|0] "s"  Vector__XXX
+ SG_ Lap_Number : 55|16@0- (1,0) [0|0] "" Vector__XXX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BO_ 1792 CHANNEL_1: 8 Vector__XXX
+ SG_ Engine_Speed : 7|16@0+ (0.1,0) [0|0] "rps" Vector__XXX
+ SG_ Gear : 23|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ Battery_Volts : 39|16@0+ (0.01,0) [0|0] "V" Vector__XXX
+ SG_ Vehicle_Speed : 55|16@0- (0.1,0) [0|0] "km/h" Vector__XXX
+
+
+
+
+
+
+
+BA_DEF_  "MoTeC_CRC" INT 0 0;
+
+BA_DEF_ SG_  "MoTeC_Type" ENUM  "Number","Compound_String";
+
+BA_DEF_ SG_  "MoTeC_Usage" ENUM  "General","CRC32","Alarm_Message","Alarm_Value","Alarm_Active_State","Alarm_Flash_State";
+
+BA_DEF_ SG_  "MoTeC_Channel" STRING ;
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+
+BA_DEF_DEF_  "MoTeC_CRC" 965321513;
+
+BA_DEF_DEF_  "MoTeC_Type" "Number";
+
+BA_DEF_DEF_  "MoTeC_Usage" "General";
+
+BA_DEF_DEF_  "MoTeC_Channel" "";
+
+BA_DEF_DEF_  "GenMsgCycleTime" 50;
+
+BA_ "GenMsgCycleTime" BO_ 1537 50;
+
+BA_ "GenMsgCycleTime" BO_ 1538 100;
+
+BA_ "GenMsgCycleTime" BO_ 1539 100;
+
+BA_ "GenMsgCycleTime" BO_ 1540 100;
+
+BA_ "GenMsgCycleTime" BO_ 1541 100;
+
+BA_ "GenMsgCycleTime" BO_ 1542 1000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BA_ "MoTeC_Channel" SG_ 1539 Exhaust_Temperature_Cylinder2 "Exhaust Temperature Cylinder2";
+
+BA_ "MoTeC_Channel" SG_ 1539 Exhaust_Temperature_Cylinder3 "Exhaust Temperature Cylinder3";
+
+BA_ "MoTeC_Channel" SG_ 1539 Exhaust_Temperature_Cylinder4 "Exhaust Temperature Cylinder4";
+
+
+
+BA_ "MoTeC_Channel" SG_ 1540 Throttle_Position "Throttle Position";
+
+
+
+
+
+
+BA_ "MoTeC_Channel" SG_ 1542 Lap_Time "Lap Time";
+
+
+BA_ "MoTeC_Channel" SG_ 1542 Lap_Number "Lap Number";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

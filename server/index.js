@@ -25,6 +25,15 @@ const wsServer = new WebSocketServer({
   path: '/graphql',
 });
 
+// Log WebSocket connection attempts
+wsServer.on('connection', (ws) => {
+  console.log('[WebSocket] Client connected');
+});
+
+wsServer.on('error', (err) => {
+  console.error('[WebSocket] Error:', err);
+});
+
 // Save the returned server's info so we can shutdown this server later
 const serverCleanup = useServer({ schema }, wsServer);
 

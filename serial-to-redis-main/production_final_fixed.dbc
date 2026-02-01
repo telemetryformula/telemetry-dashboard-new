@@ -1,0 +1,189 @@
+VERSION ""
+
+
+NS_ : 
+		NS_DESC_
+		CM_
+		BA_DEF_
+		BA_
+		VAL_
+		CAT_DEF_
+		CAT_
+		FILTER
+		BA_DEF_DEF_
+		EV_DATA_
+		ENVVAR_DATA_
+		SGTYPE_
+		SGTYPE_VAL_
+		BA_DEF_SGTYPE_
+		BA_SGTYPE_
+		SIG_TYPE_REF_
+		VAL_TABLE_
+		SIG_GROUP_
+		SIG_VALTYPE_
+		SIGTYPE_VALTYPE_
+		BO_TX_BU_
+		BA_DEF_REL_
+		BA_REL_
+		BA_DEF_DEF_REL_
+		BU_SG_REL_
+		BU_EV_REL_
+		BU_BO_REL_
+		SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+
+BO_ 1621 BrakePressure: 8 Vector__XXX
+	SG_  Front_Brake_Pressure : 0|16@1- (1,0) [0|0] "PSI" Vector__XXX
+	SG_  Rear_Break_Pressure : 16|16@1- (1,0) [0|0] "PSI" Vector__XXX
+
+BO_ 1600 PedalPosition: 8 Vector__XXX
+	SG_  Throttle_Pos_Primary : 0|16@1+ (1,0) [0|0] "Percent" Vector__XXX
+	SG_  Throttle_Pos_Secondary : 16|16@1+ (1,0) [0|0] "Percent" Vector__XXX
+
+BO_ 1608 WheelSpeed: 8 Vector__XXX
+	SG_  FR_Wheel_Speed : 0|16@1+ (1,0) [0|0] "km/hr" Vector__XXX
+	SG_  FL_Wheel_Speed : 16|16@1+ (1,0) [0|0] "km/hr" Vector__XXX
+	SG_  RR_Wheel_Speed : 32|16@1+ (1,0) [0|0] "km/hr" Vector__XXX
+	SG_  RL_Wheel_Speed : 48|16@1+ (1,0) [0|0] "km/hr" Vector__XXX
+
+BO_ 1622 SteeringPotentiometer: 8 Vector__XXX
+	SG_  Steering_Pot_Primary : 0|16@1- (1,0) [0|0] "Degrees" Vector__XXX
+	SG_  Steering_Pot_Secondary : 16|16@1- (1,0) [0|0] "Degrees" Vector__XXX
+
+BO_ 1794 CoolingLoopTemp: 8 Vector__XXX
+	SG_  Motor_One_Cooling_Loop_Temp_Out : 0|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Motor_One_Cooling_Loop_Temp_In : 8|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Motor_Two_Cooling_Loop_Temp_Out : 16|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Motor_Two_Cooling_Loop_Temp_In : 24|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Inverter_Cooling_Loop_Temp_Out : 32|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Inverter_Cooling_Loop_Temp_In : 40|8@1+ (1,0) [0|0] "C" Vector__XXX
+
+BO_ 1795 GearboxTemp: 8 Vector__XXX
+	SG_  Gearbox_One_Temp : 0|8@1+ (1,0) [0|0] "C" Vector__XXX
+	SG_  Gearbox_Two_Temp : 8|16@1+ (1,0) [0|0] "C" Vector__XXX
+
+BO_ 1136 FrontIMUAccel: 8 Vector__XXX
+	SG_  Front_IMU_Lateral_Accel : 0|16@1- (1,0) [0|0] "g" Vector__XXX
+	SG_  Front_IMU_Long_Accel : 16|16@1- (1,0) [0|0] "g" Vector__XXX
+	SG_  Front_IMU_Vert_Accel : 32|16@1- (1,0) [0|0] "g" Vector__XXX
+
+BO_ 1137 FrontIMURotate: 8 Vector__XXX
+	SG_  Front_IMU_Yaw_Rotate : 0|16@1- (1,0) [0|0] "Degrees" Vector__XXX
+	SG_  Front_IMU_Pitch_Rotate : 16|16@1- (1,0) [0|0] "Degrees" Vector__XXX
+	SG_  Front_IMU_Roll_Rotate : 32|16@1- (1,0) [0|0] "Degrees" Vector__XXX
+
+BO_ 1874 InvOneAMKStatus: 8 Vector__XXX
+	SG_  Inv_One_Status_Word : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Inv_One_Actual_Speed : 16|16@1- (1,0) [0|0] "RPM" Vector__XXX
+	SG_  Inv_One_Actual_Torque_Current : 32|16@1- (1,0) [0|0] "A" Vector__XXX
+	SG_  Inv_One_Actual_Magnetizing_Current : 48|16@1- (1,0) [0|0] "A" Vector__XXX
+
+BO_ 1875 InvTwoAMKStatus: 8 Vector__XXX
+	SG_  Inv_Two_Status_Word  : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Inv_Two_Actual_Speed_Value : 16|16@1- (1,0) [0|0] "RPM" Vector__XXX
+	SG_  Inv_Two_Torque_Current : 32|16@1- (1,0) [0|0] "A" Vector__XXX
+	SG_  Inv_Two_Actual_Magnetizing_Current : 48|16@1- (1,0) [0|0] "A" Vector__XXX
+
+BO_ 1712 PackRelayZero: 8 Vector__XXX
+	SG_  Pack_Current : 0|16@1+ (1,0) [0|0] "A" Vector__XXX
+	SG_  Pack_Inst_Voltage : 16|16@1+ (1,0) [0|0] "V" Vector__XXX
+	SG_  Pack_SOC : 32|8@1+ (1,0) [0|0] "Percent" Vector__XXX
+	SG_  Relay_State : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1713 PackOne: 8 Vector__XXX
+	SG_  Pack_DCL : 0|16@1+ (1,0) [0|0] "kWh" Vector__XXX
+	SG_  Pack_CCL : 16|16@1+ (1,0) [0|0] "kWh" Vector__XXX
+	SG_  Lowest_Temp : 32|8@1- (1,0) [0|0] "C" Vector__XXX
+	SG_  Highest_Temp : 40|8@1- (1,0) [0|0] "C" Vector__XXX
+
+BO_ 1715 PackInfoThree: 8 Vector__XXX
+	SG_  Low_Cell_ID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  High_Cell_ID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Low_Termistor_ID : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  High_Thermistor_ID : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Internal_Temp : 32|8@1- (1,0) [0|0] "C" Vector__XXX
+	SG_  Average_Temp : 40|8@1- (1,0) [0|0] "C" Vector__XXX
+	SG_  Pack_Health : 48|8@1+ (1,0) [0|0] "Percent" Vector__XXX
+
+BO_ 1716 PackInfoFour: 8 Vector__XXX
+	SG_  DTC_Flags_One : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  DTC_Flags_Two : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Current_Limit_Status : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1717 PackInfoFive: 8 Vector__XXX
+
+BO_ 1797 DriveSettings: 8 Vector__XXX
+	SG_  Ready_To_Drive_Input : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Ready_To_Drive_Arm_Inverters : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Traction_Control_Setting : 2|3@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Torque_Vectoring_Low_Setting : 5|3@1+ (1,0) [0|0] "" Vector__XXX
+	SG_  Torque_Vectoring_High_Setting : 8|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1714 CellStatus: 8 Vector__XXX
+	SG_  Low_Cell_Voltage : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+	SG_  High_Cell_Voltage : 16|16@1+ (1,0) [0|0] "V" Vector__XXX
+
+
+CM_ BO_ 1621 "Front and Rear Brake Pressure";
+CM_ SG_ 1621 FrontBrakePressure "Front Brake Pressure";
+CM_ BO_ 1600 "Brake and Throttle Pedal Position";
+CM_ SG_ 1600 ThrottlePosPrimary "Primary Throttle Pedal Position";
+CM_ SG_ 1600 ThrottlePosSecondary "Secondary Throttle Pedal Position";
+CM_ BO_ 1608 "Wheel Speed";
+CM_ SG_ 1608 FRWheelSpeed "Front Right Wheel Speed";
+CM_ SG_ 1608 FLWheelSpeed "Front Left Wheel Speed";
+CM_ SG_ 1608 RRWheelSpeed "Rear Right Wheel Speed";
+CM_ SG_ 1608 RLWheelSpeed "Rear Left Wheel Speed";
+CM_ BO_ 1622 "Steering Angle";
+CM_ SG_ 1622 SteeringPotPrimary "Primary Steering Angle";
+CM_ SG_ 1622 SteeringPotSecondary "Secondary Steering Angle";
+CM_ BO_ 1794 "Cooling Loop Temperatures";
+CM_ SG_ 1794 MotorOneCoolingLoopTempOut "Motor 1 Cooling Loop Output Water Temperature";
+CM_ SG_ 1794 MotorOneCoolingLoopTempIn "Motor 1 Cooling Loop Input Water Temperature";
+CM_ SG_ 1794 MotorTwoCoolingLoopTempOut "Motor 2 Cooling Loop Output Water Temperature";
+CM_ SG_ 1794 MotorTwoCoolingLoopTempIn "Motor 1 Cooling Loop Input Water Temperature";
+CM_ SG_ 1794 InverterCoolingLoopTempOut "Inverter Cooling Loop Output Water Temperature";
+CM_ SG_ 1794 InverterCoolingLoopTempIn "Inverter Cooling Loop Input Water Temperature";
+CM_ BO_ 1136 "Acceleration Front IMU";
+CM_ SG_ 1136 FrontIMULateralAccel "Lateral Acceleration from Front IMU";
+CM_ SG_ 1136 FrontIMULongAccel "Longitudinal Acceleration from Front IMU";
+CM_ SG_ 1136 FrontIMUVertAccel "Vertical Acceleration from Front IMU";
+CM_ BO_ 1137 "Rotation Front IMU";
+CM_ SG_ 1137 FrontIMUYawRotate "Yaw Rotation from Front IMU";
+CM_ SG_ 1137 FrontIMUPitchRotate "Pitch Rotation from Front IMU";
+CM_ SG_ 1137 FrontIMURollRotate "Roll Rotation from Front IMU";
+CM_ BO_ 643 "Status from inverter 1";
+CM_ SG_ 643 InvOneStatusWord "Status Word for Inverter 1";
+CM_ SG_ 643 InvOneActualSpeed "Actual Speed of Inverter 1";
+CM_ SG_ 643 InvOneActualTorqueCurrent "Actual Torque Current of Inverter 1";
+CM_ SG_ 643 InvOneActualMagnetizingCurrent "Actual Magnetizing Current of Inverter 1";
+CM_ BO_ 644 "Status from inverter 2";
+CM_ SG_ 644 InvTwoStatusWord  "Status Word for inverter 2";
+CM_ SG_ 644 InvTwoActualSpeedValue "Actual Speed for inverter 2";
+CM_ SG_ 644 InvTwoStatusWord "Status Word for inverter 2";
+CM_ SG_ 644 InvTwoTorqueCurrent "Actual Torque Current for Inverter 2";
+CM_ SG_ 644 InvTwoActualMagnetizingCurrent "Actual Magnetizing Current for Inverter 2";
+
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
+BA_ "DatabaseVersion" "1.0.0";
+BA_ "VFrameFormat" BO_ 2566844926 3;
+BA_ "SPN" SG_ 2566844926 WheelBasedVehicleSpeed 84;
